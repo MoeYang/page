@@ -1,15 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
-    <script type="module" crossorigin src="/page/assets/index-0b4f5401.js"></script>
-    <link rel="stylesheet" href="/page/assets/index-d5fb4960.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    
-  </body>
+
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>分析思路</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; margin: 0;
+            padding: 0;clip-path: inset(0 0 0 0);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF9966 0%, #FF5E62 100%);
+        }
+        .title-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .question-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .question-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .category-title {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    </style>
+</head>
+<body>
+<div class="w-[1280px] h-[720px] gradient-bg flex flex-col items-center p-10 relative">
+<!-- Decorative elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-yellow-300 opacity-50 rounded-full -mr-20 -mt-20"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-red-400 opacity-50 rounded-full -ml-40 -mb-40"></div>
+<!-- Title -->
+<div class="w-full text-center mb-6">
+<h1 class="text-5xl font-bold text-white title-shadow">分析思路</h1>
+<div class="w-32 h-1 bg-yellow-300 mx-auto mt-3"></div>
+</div>
+<!-- Introduction -->
+<div class="w-full text-center mb-8">
+<p class="text-2xl text-white">启发性思考问题，探究特斯拉资金危机的根源与融资战略</p>
+</div>
+<!-- Main content -->
+<div class="w-full grid grid-cols-3 gap-6">
+<!-- Column 1: Crisis Questions -->
+<div class="flex flex-col space-y-6">
+<div class="category-title rounded-lg py-3 px-4 text-center">
+<div class="flex items-center justify-center">
+<i class="fas fa-exclamation-circle text-2xl text-yellow-300 mr-3"></i>
+<h3 class="text-xl font-bold text-white">危机根源分析</h3>
+</div>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">2018年特斯拉为何面临破产风险？</p>
+<p class="text-white text-opacity-80">产能困境、债务压力与市场质疑</p>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">特斯拉资金危机的根源是什么？</p>
+<p class="text-white text-opacity-80">探究Model 3产能地狱与债务压力</p>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">从现金流角度分析特斯拉是否存在"现金危机"？</p>
+<p class="text-white text-opacity-80">经营、投资与筹资活动现金流分析</p>
+</div>
+</div>
+<!-- Column 2: Financing Questions -->
+<div class="flex flex-col space-y-6">
+<div class="category-title rounded-lg py-3 px-4 text-center">
+<div class="flex items-center justify-center">
+<i class="fas fa-balance-scale text-2xl text-yellow-300 mr-3"></i>
+<h3 class="text-xl font-bold text-white">融资优劣势分析</h3>
+</div>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">特斯拉在融资方面的优势和不足分别有哪些？</p>
+<p class="text-white text-opacity-80">内源融资、外源债务与股权融资比较</p>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">从可持续增长角度分析特斯拉应采用的融资战略？</p>
+<p class="text-white text-opacity-80">平衡短期资金需求与长期可持续发展</p>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">特斯拉如何成功度过2018年财务危机？</p>
+<p class="text-white text-opacity-80">提高产能、降本增效、多元化融资</p>
+</div>
+</div>
+<!-- Column 3: Strategy Adjustment -->
+<div class="flex flex-col space-y-6">
+<div class="category-title rounded-lg py-3 px-4 text-center">
+<div class="flex items-center justify-center">
+<i class="fas fa-chess text-2xl text-yellow-300 mr-3"></i>
+<h3 class="text-xl font-bold text-white">融资战略调整</h3>
+</div>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">在不同发展阶段，特斯拉的融资战略应该如何调整？</p>
+<p class="text-white text-opacity-80">创业期、快速扩张期、成熟期的融资策略差异</p>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">理论依据</p>
+<p class="text-white text-opacity-80">现金流管理、融资多元化的理论支持</p>
+</div>
+<div class="question-card rounded-xl p-5">
+<p class="text-white text-lg font-medium mb-2">启示与思考</p>
+<p class="text-white text-opacity-80">技术创新、现金流管理与融资策略平衡</p>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-6 text-white opacity-70">
+<span class="text-lg">3 / 15</span>
+</div>
+</div>
+</body>
 </html>
