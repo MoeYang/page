@@ -30,7 +30,8 @@ jobs:
       - name: Build zip package
         run: |
           mkdir package
-          cp -r * package/
+          shopt -s extglob
+          cp -r !(package|python_packages) package/
           if [ -d "python_packages" ]; then
             cp -r python_packages/* package/
           fi
