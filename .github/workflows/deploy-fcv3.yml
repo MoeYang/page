@@ -20,6 +20,12 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
       - name: Install dependencies if requirements.txt exists
         run: |
           if [ -f "requirements.txt" ]; then
@@ -59,8 +65,9 @@ jobs:
         run: |
           BASE64_CODE=$(base64 -w0 function.zip)
           echo "{\"code\":{\"zipFile\":\"$BASE64_CODE\"}}" > body.json
+          
           aliyun fc PUT /2023-03-30/functions/page \
             --region ${{ secrets.ALIYUN_REGION }} \
             --profile fc \
             --header "Content-Type=application/json" \
-            --body "$(cat body.json)"
+            --body-file body.json
