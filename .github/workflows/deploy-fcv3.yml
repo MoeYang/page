@@ -49,7 +49,6 @@ jobs:
       - name: Configure Aliyun
         run: |
           aliyun configure set \
-            --profile fc \
             --mode AK \
             --region ${{ secrets.ALIYUN_REGION }} \
             --access-key-id ${{ secrets.ALIYUN_ACCESS_KEY_ID }} \
@@ -61,6 +60,5 @@ jobs:
           BASE64_CODE=$(base64 -w0 function.zip)
           aliyun fc PUT /2023-03-30/functions/page \
             --region ${{ secrets.ALIYUN_REGION }} \
-            --profile fc \
             --form "code.zipFile=@function.zip"
             
