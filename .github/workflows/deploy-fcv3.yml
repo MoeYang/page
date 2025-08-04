@@ -62,6 +62,5 @@ jobs:
           aliyun fc PUT /2023-03-30/functions/page \
             --region ${{ secrets.ALIYUN_REGION }} \
             --profile fc \
-            --header "Content-Type=application/json" \
-            --body "{\"code\":{\"zipFile\":\"$BASE64_CODE\"}}"
+            --form "code.zipFile=@function.zip"
             
