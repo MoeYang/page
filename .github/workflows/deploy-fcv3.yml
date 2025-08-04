@@ -51,9 +51,9 @@ jobs:
           aliyun configure set \
             --profile fc \
             --mode AK \
-            --region ${{ secrets.ALIYUN_REGION }} \
-            --access-key-id ${{ secrets.ALIYUN_ACCESS_KEY_ID }} \
-            --access-key-secret ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+            --region ${{ deploy.ALIYUN_REGION }} \
+            --access-key-id ${{ deploy.ALIYUN_ACCESS_KEY_ID }} \
+            --access-key-secret ${{ deploy.ALIYUN_ACCESS_KEY_SECRET }}
 
       # 6️⃣ 部署到 FCv3
       - name: Update FCv3 function
