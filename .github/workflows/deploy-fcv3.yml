@@ -58,7 +58,9 @@ jobs:
       - name: Update FCv3 function
         run: |
           BASE64_CODE=$(base64 -w0 function.zip)
+          echo "{\"code\":{\"zipFile\":\"$BASE64_CODE\"}}" > body.json
           aliyun fc PUT /2023-03-30/functions/page \
             --region ${{ secrets.ALIYUN_REGION }} \
-            --form "code.zipFile=@function.zip"
-            
+            --profile fc \
+            --header "Content-Type=application/json" \
+            --body "$(cat body.json)"
