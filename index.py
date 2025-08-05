@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 import os
 from flask import Flask, render_template, Response
+from blueprint_config import all_blueprints
 
-app = Flask(__name__, static_folder="static", template_folder=".")
+app = Flask(__name__, static_folder="static", template_folder="templates")
+
+# 注册蓝图
+for bp in all_blueprints:
+    app.register_blueprint(bp)
 
 @app.route("/")
 def home():
